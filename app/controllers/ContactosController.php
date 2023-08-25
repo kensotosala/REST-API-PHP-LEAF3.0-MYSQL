@@ -12,4 +12,10 @@ class ContactosController extends Controller
         $datosContacto = Contactos::all();
         response()->json($datosContacto);
     }
+
+    public function consultar($id)
+    {
+        $datosContacto = Contactos::find($id);
+        response()->json($datosContacto);
+    }
 }
