@@ -16,3 +16,6 @@ app()->post("/contactos", 'ContactosController@agregar');
 
 // Borra un registro (Verbo DELETE)
 app()->delete("/contactos/{id}", 'ContactosController@borrar');
+
+// Actualizar un registro (Verbo PUT)
+app()->put("/contactos/{id}", 'ContactosController@actualizar');
