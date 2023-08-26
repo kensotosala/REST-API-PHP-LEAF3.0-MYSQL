@@ -30,4 +30,10 @@ class ContactosController extends Controller
 
         response()->json(["message" => "Registro agregado!"]);
     }
+
+    public function borrar($id)
+    {
+        Contactos::destroy($id);
+        response()->json(["message" => "Registro: ->" . $id . "<- borrado!"]);
+    }
 }
